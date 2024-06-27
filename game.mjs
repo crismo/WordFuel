@@ -223,6 +223,8 @@ function showSummary() {
 
 window.addEventListener("keydown", async (e) => { e.preventDefault(); await onPlayerInput(e); });
 
+outputElement.addEventListener("click", () => { outputElement.focus(); });
+
 
 async function loadFile(file) {
     return await (await fetch(file).then(response => response.text()));
