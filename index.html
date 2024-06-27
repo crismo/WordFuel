@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>WordFuel</title>
+    <style>
+        body {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        .fade-up {
+            animation: fadeUp 2.5s forwards;
+            font-size: 2em;
+            color: black;
+            position: absolute;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-150px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="overflow: hidden;">
+
+    <div id="stage" style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;flex-direction: column;">
+        <div id="output" style="z-index: 2 ;text-align: center;background-color: aliceblue;width: 50%;height: 2em; display: flex; justify-content: center; align-items: center;">
+        </div>
+
+        <div id="footer" style="z-index: 1;position: fixed; bottom: 0; width: 100%; padding: 10px; text-align: center;">
+            0%
+        </div>
+
+    </div>
+    </div>
+    <script src="./game.mjs" type="module"></script>
+</body>
+
+</html>
