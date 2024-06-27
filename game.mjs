@@ -223,7 +223,7 @@ function showSummary() {
 
 window.addEventListener("keydown", async (e) => { e.preventDefault(); await onPlayerInput(e); });
 
-outputElement.addEventListener("click", () => { outputElement.focus(); });
+window.addEventListener("click", () => { document.getElementById("KeyboardTrigger").focus(); });
 
 
 async function loadFile(file) {
